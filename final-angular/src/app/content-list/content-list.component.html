@@ -1,6 +1,2 @@
-<div class="content{{product.contentId}}">
-  <div class ="bc">Bar Code: {{ product.barcode }}</div>
-  <div class ="brand">Brand: {{ product.brand }}</div>
-  <div class="dept">Department: {{product.department}}</div>
-  <div class="stock">Stock: {{product.stock}}</div>
-</div>
+<app-content-card *ngFor="let individualProduct of productsList; index as i; first as isFirst" [product]="individualProduct"
+                  class="content-card-{{i}}" [class.is-first]="isFirst"></app-content-card>

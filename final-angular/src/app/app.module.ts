@@ -14,6 +14,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import {RouterModule} from '@angular/router';
+import { MatCardModule} from '@angular/material/card';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -36,10 +39,12 @@ import {RouterModule} from '@angular/router';
     BrowserAnimationsModule,
     MatButtonModule,
     MatInputModule,
+    MatCardModule,
     RouterModule.forRoot([
-      { path: 'content/:barcode', component: ContentListComponent },
+      { path: 'add', component: AddContentComponent },
       { path: 'content', component: ContentListComponent }
-    ])
+    ]),
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

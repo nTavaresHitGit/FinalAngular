@@ -17,4 +17,7 @@ private httpOptions  = {
   addProduct(content: Content): Observable<Content> {
     return this.http.post<Content>('api/content', content, this.httpOptions);
   }
+  deleteProduct(content: Content): Observable<Content> {
+    return this.http.delete<Content>('api/content', this.httpOptions);
+  }
 }

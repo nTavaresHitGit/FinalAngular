@@ -1,0 +1,16 @@
+:host{
+  width: 400px;
+  display: block;
+  margin: 24px auto;
+  border: 2px solid #000000;
+}
+:host.is-first{
+  background-color:#FFFDD0;
+}
+.bc{
+  font-size: 20px;
+  text-align: center;
+}
+.special{
+  color:#ff0000;
+}
