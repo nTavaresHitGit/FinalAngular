@@ -1,0 +1,18 @@
+<app-add-content (newProductEvent)="addProductToList($event)"></app-add-content>
+<mat-form-field>
+  <mat-label>Barcode</mat-label>
+  <input matInput [(ngModel)]="newProduct.barcode" />
+</mat-form-field><br>
+<mat-form-field>
+  <mat-label>Brand</mat-label>
+  <input matInput [(ngModel)]="newProduct.brand" /><br />
+</mat-form-field><br>
+<mat-form-field>
+  <mat-label>Department</mat-label>
+  <input matInput [(ngModel)]="newProduct.department" /><br />
+</mat-form-field><br>
+<mat-form-field>
+  <mat-label>Stock</mat-label>
+  <input matInput [(ngModel)]="newProduct.stock" /><br />
+</mat-form-field><br>
+<button mat-flat-button color="primary" (click)="addProduct()">Add Product</button>
